@@ -43,4 +43,16 @@ public class KataTest {
     public void validPhoneNumber() {
         assertEquals("(123) 456-7890", Kata.createPhoneNumber(new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 0}));
     }
+
+    @Test
+    public void isIsogram() {
+        assertEquals(true, Kata.isIsogram("Dermatoglyphics"));
+        assertEquals(true, Kata.isIsogram("isogram"));
+        assertEquals(false, Kata.isIsogram("moose"));
+        assertEquals(false, Kata.isIsogram("isIsogram"));
+        assertEquals(false, Kata.isIsogram("aba"));
+        assertEquals(false, Kata.isIsogram("moOse"));
+        assertEquals(true, Kata.isIsogram("thumbscrewjapingly"));
+        assertEquals(true, Kata.isIsogram(""));
+    }
 }

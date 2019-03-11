@@ -22,4 +22,9 @@ public class Kata {
                 .collect(Collectors.joining())
                 .replaceFirst("(\\d{3})(\\d{3})(\\d+)", "($1) $2-$3");
     }
+
+    public static boolean isIsogram(String word) {
+        return word.toLowerCase().chars()
+                .distinct().count() == word.length();
+    }
 }
