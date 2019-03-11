@@ -15,4 +15,11 @@ public class Kata {
     public static boolean validatePin(String pin) {
         return pin.matches("\\d+") && List.of(4, 6).contains(pin.length());
     }
+
+    public static String createPhoneNumber(int[] numbers) {
+        return Arrays.stream(numbers)
+                .mapToObj(String::valueOf)
+                .collect(Collectors.joining())
+                .replaceFirst("(\\d{3})(\\d{3})(\\d+)", "($1) $2-$3");
+    }
 }
