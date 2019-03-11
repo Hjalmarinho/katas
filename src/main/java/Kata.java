@@ -11,4 +11,8 @@ public class Kata {
                 .collect(Collectors.toList());
         return Collections.max(integers).toString() + " " + Collections.min(integers).toString() ;
     }
+
+    public static boolean validatePin(String pin) {
+        return pin.matches("\\d+") && List.of(4, 6).contains(pin.length());
+    }
 }
