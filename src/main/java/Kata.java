@@ -31,11 +31,9 @@ public class Kata {
     }
 
     public static int getVowelCount(String word) {
-        return word != null ? (int) word.chars().filter(Kata::isVowel).count() : 0;
-    }
-
-    private static boolean isVowel(int character) {
-        return "aeiou".indexOf(character) >= 0;
+        return (int) word.chars()
+                .filter(c -> "aeiou".indexOf(c) >= 0)
+                .count();
     }
 
     public static String sortWordsByContainedNumber(String words) {

@@ -62,7 +62,6 @@ public class KataTest {
         assertEquals(5, Kata.getVowelCount("abracadabra"));
         assertEquals(4, Kata.getVowelCount("auie"));
         assertEquals(0, Kata.getVowelCount(""));
-        assertEquals(0, Kata.getVowelCount(null));
     }
 
     @Test
