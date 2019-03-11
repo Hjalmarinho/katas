@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -34,5 +35,11 @@ public class Kata {
 
     private static boolean isVowel(int character) {
         return "aeiou".indexOf(character) >= 0;
+    }
+
+    public static String order(String words) {
+        String[] wordsSeparated = words.split(" ");
+        Arrays.sort(wordsSeparated, Comparator.comparing(s -> s.replaceAll("\\D","")));
+        return Arrays.stream(wordsSeparated).collect(Collectors.joining(" "));
     }
 }
