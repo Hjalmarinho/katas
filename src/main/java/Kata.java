@@ -27,4 +27,12 @@ public class Kata {
         return word.toLowerCase().chars()
                 .distinct().count() == word.length();
     }
+
+    public static int getVowelCount(String word) {
+        return word != null ? (int) word.chars().filter(Kata::isVowel).count() : 0;
+    }
+
+    private static boolean isVowel(int character) {
+        return "aeiou".indexOf(character) >= 0;
+    }
 }
