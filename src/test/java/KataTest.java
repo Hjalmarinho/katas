@@ -67,8 +67,15 @@ public class KataTest {
 
     @Test
     public void sortWords() {
-        assertEquals("Thi1s is2 3a T4est", Kata.order("is2 Thi1s T4est 3a"));
-        assertEquals("Fo1r the2 g3ood 4of th5e pe6ople", Kata.order("4of Fo1r pe6ople g3ood th5e the2"));
-        assertEquals("", Kata.order(""));
+        assertEquals("Thi1s is2 3a T4est", Kata.sortWordsByContainedNumber("is2 Thi1s T4est 3a"));
+        assertEquals("Fo1r the2 g3ood 4of th5e pe6ople", Kata.sortWordsByContainedNumber("4of Fo1r pe6ople g3ood th5e the2"));
+        assertEquals("", Kata.sortWordsByContainedNumber(""));
+    }
+
+    @Test
+    public void rowSumOddNumbers() {
+        assertEquals(64, Kata.rowSumOddNumbers(4));
+        assertEquals(1, Kata.rowSumOddNumbers(1));
+        assertEquals(74088, Kata.rowSumOddNumbers(42));
     }
 }

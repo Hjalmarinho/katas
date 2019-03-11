@@ -3,6 +3,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class Kata {
 
@@ -37,9 +38,17 @@ public class Kata {
         return "aeiou".indexOf(character) >= 0;
     }
 
-    public static String order(String words) {
+    public static String sortWordsByContainedNumber(String words) {
         String[] wordsSeparated = words.split(" ");
         Arrays.sort(wordsSeparated, Comparator.comparing(s -> s.replaceAll("\\D","")));
         return Arrays.stream(wordsSeparated).collect(Collectors.joining(" "));
+    }
+
+    public static int rowSumOddNumbers(int row) {
+        int indexOfLastOddNumber = (row * (row + 1)) / 2;
+        int indexOfFirstOddNumber = indexOfLastOddNumber - row + 1;
+        return IntStream.rangeClosed(indexOfFirstOddNumber, indexOfLastOddNumber)
+                .map(i -> (2 * i - 1))
+                .sum();
     }
 }
