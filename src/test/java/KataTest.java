@@ -6,7 +6,6 @@ public class KataTest {
 
     @Test
     public void highAndLow() {
-        System.out.println("HELLO");
         assertEquals("42 -9", Kata.highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"));
     }
 
@@ -84,5 +83,14 @@ public class KataTest {
         assertEquals(3, Kata.lengthOfShortestWord("turns out random test cases are easier than writing out basic ones"));
         assertEquals(4, Kata.lengthOfShortestWord("should have different cases"));
         assertEquals(5, Kata.lengthOfShortestWord("Hello"));
+    }
+
+    @Test
+    public void whoLikesIt() {
+        assertEquals("no one likes this", Kata.whoLikesIt());
+        assertEquals("Peter likes this", Kata.whoLikesIt("Peter"));
+        assertEquals("Jacob and Alex like this", Kata.whoLikesIt("Jacob", "Alex"));
+        assertEquals("Max, John and Mark like this", Kata.whoLikesIt("Max", "John", "Mark"));
+        assertEquals("Alex, Jacob and 2 others like this", Kata.whoLikesIt("Alex", "Jacob", "Mark", "Max"));
     }
 }
