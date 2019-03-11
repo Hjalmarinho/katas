@@ -51,4 +51,11 @@ public class Kata {
                 .map(i -> (2 * i - 1))
                 .sum();
     }
+
+    public static int lengthOfShortestWord(String sentence) {
+        return Arrays.stream(sentence.split(" "))
+                .mapToInt(String::length)
+                .min()
+                .getAsInt();
+    }
 }

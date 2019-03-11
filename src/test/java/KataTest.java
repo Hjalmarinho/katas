@@ -78,4 +78,12 @@ public class KataTest {
         assertEquals(1, Kata.rowSumOddNumbers(1));
         assertEquals(74088, Kata.rowSumOddNumbers(42));
     }
+
+    @Test
+    public void lengthOfShortestWord() {
+        assertEquals(3, Kata.lengthOfShortestWord("bitcoin take over the world maybe who knows perhaps"));
+        assertEquals(3, Kata.lengthOfShortestWord("turns out random test cases are easier than writing out basic ones"));
+        assertEquals(4, Kata.lengthOfShortestWord("should have different cases"));
+        assertEquals(5, Kata.lengthOfShortestWord("Hello"));
+    }
 }
