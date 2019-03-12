@@ -66,4 +66,14 @@ public class Kata {
             default: return names[0] + ", " + names[1] + " and " + (names.length - 2) + " others like this";
         }
     }
+
+    public static String orderByWeight(String weights) {
+        return Arrays.stream(weights.split(" "))
+                .sorted(Comparator.comparing(Kata::digitSum).thenComparing(Comparator.naturalOrder()))
+                .collect(Collectors.joining(" "));
+    }
+
+    public static int digitSum(String number){
+        return number.chars().map(i -> i - '0').sum();
+    }
 }

@@ -93,4 +93,10 @@ public class KataTest {
         assertEquals("Max, John and Mark like this", Kata.whoLikesIt("Max", "John", "Mark"));
         assertEquals("Alex, Jacob and 2 others like this", Kata.whoLikesIt("Alex", "Jacob", "Mark", "Max"));
     }
+
+    @Test
+    public void orderByWeight() {
+        assertEquals("2000 103 123 4444 99", Kata.orderByWeight("103 123 4444 99 2000"));
+        assertEquals("11 11 2000 10003 22 123 1234000 44444444 9999", Kata.orderByWeight("2000 10003 1234000 44444444 9999 11 11 22 123"));
+    }
 }
