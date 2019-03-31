@@ -26,4 +26,13 @@ class KataKotlinTest {
         assertEquals("123", numberToString(123))
         assertEquals("999", numberToString(999))
     }
+
+    @Test
+    fun calculateDutyFree() {
+        assertEquals(166, howManyBottles(12, 50, 1000))
+        assertEquals(294, howManyBottles(17, 10, 500))
+        assertEquals(357, howManyBottles(24, 35, 3000))
+        assertEquals(60, howManyBottles(377, 40, 9048))
+        assertEquals(10, howManyBottles(2479, 51, 13390))
+    }
 }

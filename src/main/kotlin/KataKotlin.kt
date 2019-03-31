@@ -1,6 +1,10 @@
-    // Since we are defining our method outside of a class, it represents a package-level function
-    fun sumPositives(ints: IntArray): Int = ints.filter { it > 0 }.sum() // All types are objects
+// Since we are defining our method outside of a class, it represents a package-level function
+    var sumPositives = {ints:IntArray -> ints.filter { it > 0 }.sum()} // All types are objects
 
-    fun reverseLetters(letters: String): String = letters.filter{it.isLetter()}.reversed()
+    var reverseLetters = {letters:String -> letters.filter{it.isLetter()}.reversed()}
 
-    fun numberToString(number: Int): String = number.toString()
+    var numberToString = Int::toString
+
+    fun howManyBottles(bottleStreetPrice: Int, percentageDiscount: Int, holidayPrice: Int): Int {
+        return holidayPrice * 100 / (bottleStreetPrice * percentageDiscount)
+    }
