@@ -1,6 +1,9 @@
+    // Since we are defining our method outside of a class, it represents a package-level function
+    fun sumPositives(ints: IntArray): Int {
+        // All types are objects
+        return ints.filter { it > 0 }.sum()
+    }
 
-// Since we are defining our method outside of a class, it represents a package-level function:
-// For now, Kotlin only supports references to top-level and local functions and members of classes, not individual instances.
-fun sumPositives(ints: IntArray): Int {
-    return ints.filter { int -> 0 < int  }.sum()
-}
+    fun reverseLetters(letters: String): String {
+        return letters.filter{it.isLetter()}.reversed()
+    }
