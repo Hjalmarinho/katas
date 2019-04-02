@@ -19,3 +19,6 @@ fun calculateHumanCatAndDogYears(humanYears: Int): IntArray =
 
 var evenOrOdd = {number:Int -> if (number % 2 == 0) "Even" else "Odd"}
 
+fun areAllNumbersSmallEnough(numbers: IntArray, limit: Int) = numbers.all { it <= limit }
+
+
