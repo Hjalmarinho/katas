@@ -60,4 +60,11 @@ class KataKotlinTest {
         assertEquals(true, areAllNumbersSmallEnough(intArrayOf(101, 45, 75, 105, 99, 107), 107))
         assertEquals(true, areAllNumbersSmallEnough(intArrayOf(80, 117, 115, 104, 45, 85, 112, 115), 120))
     }
+
+    @Test
+    fun removeSpaces() {
+        assertEquals("8j8mBliB8gimjB8B8jlB", removeSpaces("8 j 8   mBliB8g  imjB8B8  jl  B"))
+        assertEquals("88Bifk8hB8BB8BBBB888chl8BhBfd", removeSpaces("8 8 Bi fk8h B 8 BB8B B B  B888 c hl8 BhB fd"))
+        assertEquals("8aaaaaddddr", removeSpaces("8aaaaa dddd r     "))
+    }
 }

@@ -1,7 +1,7 @@
 // Since we are defining our method outside of a class, it represents a package-level function
 var sumPositives = {ints:IntArray -> ints.filter { it > 0 }.sum()} // All types are objects
 
-var reverseLetters = {letters:String -> letters.filter{it.isLetter()}.reversed()}
+fun reverseLetters(letters:String) =  letters.filter{it.isLetter()}.reversed()
 
 var numberToString = Int::toString
 
@@ -21,4 +21,5 @@ var evenOrOdd = {number:Int -> if (number % 2 == 0) "Even" else "Odd"}
 
 fun areAllNumbersSmallEnough(numbers: IntArray, limit: Int) = numbers.all { it <= limit }
 
+fun removeSpaces(string: String) = string.replace(" ", "")
 
