@@ -23,3 +23,5 @@ fun areAllNumbersSmallEnough(numbers: IntArray, limit: Int) = numbers.all { it <
 
 fun removeSpaces(string: String) = string.replace(" ", "")
 
+fun countRedBeads(blueBeads: Int) = if (blueBeads < 2) 0 else (blueBeads - 1) * 2
+

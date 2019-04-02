@@ -67,4 +67,12 @@ class KataKotlinTest {
         assertEquals("88Bifk8hB8BB8BBBB888chl8BhBfd", removeSpaces("8 8 Bi fk8h B 8 BB8B B B  B888 c hl8 BhB fd"))
         assertEquals("8aaaaaddddr", removeSpaces("8aaaaa dddd r     "))
     }
+
+    @Test
+    fun countRedBeads() {
+        assertEquals(0, countRedBeads(0))
+        assertEquals(0, countRedBeads(1))
+        assertEquals(4, countRedBeads(3))
+        assertEquals(8, countRedBeads(5))
+    }
 }
