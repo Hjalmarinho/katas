@@ -1,5 +1,7 @@
+
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
+import kotlin.test.assertTrue
 
 class KataKotlinTest {
 
@@ -21,7 +23,7 @@ class KataKotlinTest {
     }
 
     @Test
-    fun testFixed() {
+    fun numbersToString() {
         assertEquals("67", numberToString(67))
         assertEquals("123", numberToString(123))
         assertEquals("999", numberToString(999))
@@ -34,5 +36,12 @@ class KataKotlinTest {
         assertEquals(357, howManyBottles(24, 35, 3000))
         assertEquals(60, howManyBottles(377, 40, 9048))
         assertEquals(10, howManyBottles(2479, 51, 13390))
+    }
+
+    @Test
+    fun calculateHumanCatAndDogYears() {
+        assertTrue (calculateHumanCatAndDogYears(1).contentEquals(intArrayOf(1, 15, 15)))
+        assertTrue (calculateHumanCatAndDogYears(2).contentEquals(intArrayOf(2, 24, 24)))
+        assertTrue (calculateHumanCatAndDogYears(10).contentEquals(intArrayOf(10, 56, 64)))
     }
 }
