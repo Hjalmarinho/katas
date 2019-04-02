@@ -81,4 +81,12 @@ class KataKotlinTest {
         assertEquals(10, findSmallestInt(listOf(15, 20, 10, 17, 22, 9001)))
         assertEquals(0, findSmallestInt(listOf()))
     }
+
+    @Test
+    fun findMiddleCharacter() {
+        assertEquals("es", findMiddleCharacter("test"))
+        assertEquals("dd", findMiddleCharacter("middle"))
+        assertEquals("t", findMiddleCharacter("testing"))
+        assertEquals("A", findMiddleCharacter("A"))
+    }
 }

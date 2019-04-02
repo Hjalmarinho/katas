@@ -27,3 +27,8 @@ fun countRedBeads(blueBeads: Int) = if (blueBeads < 2) 0 else (blueBeads - 1) * 
 
 fun findSmallestInt(numbers: List<Int>) = numbers.min() ?: 0 // The Elvis operator ?:
 
+fun findMiddleCharacter(string: String): String {
+    val lenth = string.length
+    var start = if (lenth % 2 == 0) lenth / 2 - 1 else lenth / 2
+    return string.substring(start, lenth / 2 + 1)
+}
