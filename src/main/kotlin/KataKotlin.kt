@@ -25,3 +25,5 @@ fun removeSpaces(string: String) = string.replace(" ", "")
 
 fun countRedBeads(blueBeads: Int) = if (blueBeads < 2) 0 else (blueBeads - 1) * 2
 
+fun findSmallestInt(numbers: List<Int>) = numbers.min() ?: 0 // The Elvis operator ?:
+

@@ -75,4 +75,10 @@ class KataKotlinTest {
         assertEquals(4, countRedBeads(3))
         assertEquals(8, countRedBeads(5))
     }
+
+    @Test
+    fun findSmallestInt() {
+        assertEquals(10, findSmallestInt(listOf(15, 20, 10, 17, 22, 9001)))
+        assertEquals(0, findSmallestInt(listOf()))
+    }
 }
