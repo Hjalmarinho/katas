@@ -44,4 +44,12 @@ class KataKotlinTest {
         assertTrue (calculateHumanCatAndDogYears(2).contentEquals(intArrayOf(2, 24, 24)))
         assertTrue (calculateHumanCatAndDogYears(10).contentEquals(intArrayOf(10, 56, 64)))
     }
+
+    @Test
+    fun evenOrOdd() {
+        assertEquals("Even", evenOrOdd(2))
+        assertEquals("Even", evenOrOdd(0))
+        assertEquals("Odd", evenOrOdd(7))
+        assertEquals("Odd", evenOrOdd(1))
+    }
 }
