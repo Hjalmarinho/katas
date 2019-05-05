@@ -1,3 +1,5 @@
+import kotlin.math.sqrt
+
 // Since we are defining our method outside of a class, it represents a package-level function
 var sumPositives = {ints:IntArray -> ints.filter { it > 0 }.sum()} // All types are objects
 
@@ -31,4 +33,8 @@ fun findMiddleCharacter(string: String): String {
     val lenth = string.length
     var start = if (lenth % 2 == 0) lenth / 2 - 1 else lenth / 2
     return string.substring(start, lenth / 2 + 1)
+}
+
+fun predictAge(vararg ages: Int): Int {
+    return (sqrt(ages.map { it * it }.sum().toDouble()) / 2).toInt()
 }
